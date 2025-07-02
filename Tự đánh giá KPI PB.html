@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Mở Link Theo Từ Khóa</title>
+</head>
+<body>
+  <h2>Chức vụ:</h2>
+  <input type="text" id="keyword" placeholder="">
+  <button onclick="moLink()">Mở</button>
+
+  <script>
+    function moLink() {
+      const kw = document.getElementById("keyword").value.toLowerCase();
+      const links = {
+        "nvns": "https://docs.google.com/forms/d/e/1FAIpQLSej-bhglC6PZ0V__oLFugMJ-7-6auHh-SqJylM7AJl1qAMfwQ/viewform?usp=preview",
+        "lx": "https://docs.google.com/forms/d/e/1FAIpQLSfdCubfC_aPVedTVTlYxeorbNxHivLMyZfXlfBy6yqdd6E8GA/viewform?usp=preview",
+        "na": "https://docs.google.com/forms/d/e/1FAIpQLSeuSDN9Wgir4zMYG2bCmXIrLqyL9CNtnr1kYqL6I9oG6nGLjw/viewform?usp=preview",
+        "tv": "https://docs.google.com/forms/d/e/1FAIpQLSd_wknLZSnycbarhFn1_jH3lmmEVDMwhVwNneHmlCe5bKlkSw/viewform?usp=preview",
+	"bv": "https://docs.google.com/forms/d/e/1FAIpQLSdr5HiTp95XbRMyV2sRDTts6HsVbqazEavZTr65qzcdi9pQOA/viewform?usp=preview",
+	"nvhc":"https://docs.google.com/forms/d/e/1FAIpQLScf2r6K57hqvy_JkgZdWG2Z5bPcPd62qje6flWcGrxFfA8MDQ/viewform?usp=preview",
+	"ptkhm":"https://docs.google.com/forms/d/e/1FAIpQLSejdzjX_k6puyDHtepzBUYrUM46T_rBZ9MbpGxRe-MdXqyw_g/viewform?usp=preview",
+	"nvkd":"https://docs.google.com/forms/d/e/1FAIpQLSdFFMuo_6MaRLcbVkF7V4RgOXv8wlYMu3pUYkbRMKV1BAUvjg/viewform?usp=preview",
+	"tlkd":"https://docs.google.com/forms/d/e/1FAIpQLScjWqXIkAO2Cr9x7V6F2nicuYw7iGCnQNAXSJ1sRtwkRchNiw/viewform?usp=preview",
+	"lxt":"https://docs.google.com/forms/d/e/1FAIpQLSdjYNJw0p2Ro1HltVmfNRvT3Nj1pUIyCU1BuRpGVdv-68ZHuA/viewform?usp=preview",
+	"lxc":"https://docs.google.com/forms/d/e/1FAIpQLScvW8Lek6EVCRJ3iuBHyP9YToCLniapPwZUuCbvF6IdpvDalQ/viewform?usp=preview",
+	"ppkd":"https://docs.google.com/forms/d/e/1FAIpQLSdW17fWU6DFwReqPZYPT7PgAmuSoCS_Yk-wMt6C-O2qeMwf_Q/viewform?usp=preview",
+	"cnsx":"https://docs.google.com/forms/d/e/1FAIpQLScSH2tSVD5agqqDeIjZ-I3qUUr_hoZwoo8KD_Go0XmGNg4aig/viewform?usp=preview",
+	"ttsx":"https://docs.google.com/forms/d/e/1FAIpQLSdA2WNV9U6EnGFE1-IBhCtg6IjjW1QoskxhoVPzZtWx5DSX5w/viewform?usp=preview",
+	"cnk":"https://docs.google.com/forms/d/e/1FAIpQLSeDGq4z-VyZZcd2jRcSFa752UtJYjncTq6_zn33Gt_ThlmcoA/viewform?usp=preview",
+	"tlsx":"https://docs.google.com/forms/d/e/1FAIpQLSduK0tEsOq36TwVz7-KWsIhfgoaPKMVoQR-gbVHjqy8D8XqAQ/viewform?usp=preview",
+	"cnrv":"https://docs.google.com/forms/d/e/1FAIpQLSdVV7ahomUrV-SL3YN1qgc3KWxvvwSDQyLm7enk_CsrcP8kIQ/viewform?usp=preview",
+	"ckxlnt":"https://docs.google.com/forms/d/e/1FAIpQLScTIg1uSBprWpBGIZLPnVsz5RvzrEydmw6dU0wtzo91FRHOhA/viewform?usp=preview",
+	"nvcd":"https://docs.google.com/forms/d/e/1FAIpQLSfxiYXcOtNaz5JEZWUQJS6kFnXZYa1gztrfAFRmqOm6mBRfZw/viewform?usp=preview",
+	"nvqhse":"https://docs.google.com/forms/d/e/1FAIpQLScLeVgkj9cRGgB3ee55q5OGiPe23SscKItLYYGGOyKfaQA3fw/viewform?usp=preview",
+	"rnd":"https://docs.google.com/forms/d/e/1FAIpQLSfcnoJ4MNXO4uhEAt1PE5bNdWI_LAs-H9bhAMOgt2VjP_Vo9A/viewform?usp=preview",
+	"htkh":"https://docs.google.com/forms/d/e/1FAIpQLSdfp-iixOZMlHrTH6ucWBo2ZjseBi2Wqi_g2R410t4Y_TPA6w/viewform?usp=preview",
+	"nvmkt":"https://docs.google.com/forms/d/e/1FAIpQLScfmDlZjmU6sW_HRPvOAm5l8COtPbE5gJMuBmJyKF_EnnnAPA/viewform?usp=preview",
+	"ktth":"https://docs.google.com/forms/d/e/1FAIpQLSfZhD1RrdPMXAzFIKOK84eH_Nd--cFvwKFQqoywYoukP_Xa1g/viewform?usp=preview",
+	"ktv":"https://docs.google.com/forms/d/e/1FAIpQLSdiQiQfmQMFUW9DzVELHf7eWRb27UVw1SUUU1djr0AI7bY9Iw/viewform?usp=preview",
+	"nvk":"https://docs.google.com/forms/d/e/1FAIpQLSfEbEiJRxNhp2wJ8mGKCHkeNxqDnsLkymRUNPc6nf97sf8VKg/viewform?usp=preview",
+	"tptchc":"https://docs.google.com/forms/d/e/1FAIpQLSc-CIo1GRBFaLKKJmgOs9SW2pOkHgHIktlfdsFBnP-gwTMhGQ/viewform?usp=preview",
+	"tpkd":"https://docs.google.com/forms/d/e/1FAIpQLSfm_m4JbWaq2qOcYIBPYjFcWvg3gpI4sqsOFVi_qOB8bP0Ohg/viewform?usp=preview",
+	"tpsx":"https://docs.google.com/forms/d/e/1FAIpQLScmA6iEIiD7Hp1OfoXZQqUdWKT4eA5fcBRWmXVez_BqbTFmCA/viewform?usp=preview",
+	"tpqhse":"https://docs.google.com/forms/d/e/1FAIpQLSeb9s-0MwWKt8SnCd7h7PX-xGPd3CvIWD3asZtDAJKyr-gcSA/viewform?usp=preview",
+	"tpvt":"https://docs.google.com/forms/d/e/1FAIpQLSffKXYwMtXE6fd8WfpeAIZnn8H0aqGvEH8qFdAqka0dvzke7g/viewform?usp=preview",
+	"tpkt":"https://docs.google.com/forms/d/e/1FAIpQLScyki-U_WHhabNErkuJMvK_LF4Yyk04y0cjo2Yi5kh6RdVNFQ/viewform?usp=preview",
+	"ptgdkd":"https://docs.google.com/forms/d/e/1FAIpQLScVjjMPO4vlAlPQ8kBOhM2nw8W1YgddiuXSxZJ7AFPjSgfO1w/viewform?usp=preview",
+	"ptgdsx":"https://docs.google.com/forms/d/e/1FAIpQLSdVg1tSvzADW2Py5A-FCkJDVcwYFOdrfjichAZegRZayTveUQ/viewform?usp=preview"
+      };
+      if (links[kw]) {
+        window.location.href = links[kw];
+      } else {
+        alert("Không tìm thấy từ khóa này!");
+      }
+    }
+  </script>
+</body>
+</html>
